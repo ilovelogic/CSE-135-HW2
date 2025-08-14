@@ -11,7 +11,8 @@ int main(int argc, char **argv, char **envp)
 	<body><h1 align=center>POST Message Body</h1>\
   	<hr/>\n");
 
-  printf("Message Body: Anne was here - %s\n<br/>", fgets(str, 1000, stdin));
+  printf("<h1>Anne was here</h1>");
+  printf("Message Body: %s\n<br/>", fgets(str, 1000, stdin));
 
   // Print the HTML footer 
   printf("</body>");
