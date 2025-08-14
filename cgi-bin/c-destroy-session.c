@@ -12,7 +12,7 @@ int main(int argc, char **argv, char **envp)
   printf("<html>");
   printf("<head><title>C Session Destroyed</title></head>");
   printf("<body>");
-  printf("<h1>C Session Destroyed</h1>");
+  printf("<h1>Anne was here - C Session Destroyed</h1>");
 
   // Links
   printf("<a href=\"/cgi-bin/c-sessions-1.cgi\">Back to Page 1</a>");

@@ -12,6 +12,7 @@ int main(int argc, char **argv, char **envp)
   	<hr/>\n");
 
   // Get and format query string
+  printf("Anne was here");
   printf("Raw query string: %s\n<br/><br/>", getenv("QUERY_STRING"));
   printf("<table> Formatted Query String:");
   char *query = strdup(getenv("QUERY_STRING"));

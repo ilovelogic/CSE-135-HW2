@@ -33,7 +33,7 @@ int main(int argc, char **argv, char **envp)
   printf("<html>");
   printf("<head><title>C Sessions</title></head>\n");
   printf("<body>");
-  printf("<h1>C Sessions Page 1</h1>");
+  printf("<h1>Anne was here - C Sessions Page 1</h1>");
   printf("<table>");
 
   // First check for new Cookie, then Check for old Cookie

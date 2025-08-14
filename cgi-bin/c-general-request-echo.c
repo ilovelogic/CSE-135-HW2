@@ -12,6 +12,7 @@ int main(int argc, char **argv, char **envp)
   	<hr/>\n");
 
   // Get environment vars
+  printf("Anne was here");
   printf("<table>\n");
   printf("<tr><td>Protocol:</td><td>%s</td></tr>\n", getenv("SERVER_PROTOCOL"));
   printf("<tr><td>Method:</td><td>%s</td></tr>\n", getenv("REQUEST_METHOD"));
