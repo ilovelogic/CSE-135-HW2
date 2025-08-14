@@ -10,6 +10,7 @@ int main(int argc, char **argv, char **envp)
 	<body><h1 align=center>Environment Variables</h1> \
   	<hr/>\n");
 
+  printf("Anne was here");
   for (char **env = envp; *env != 0; env++)
   {
     char *thisEnv = *env;
