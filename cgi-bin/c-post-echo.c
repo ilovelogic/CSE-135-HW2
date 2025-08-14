@@ -13,7 +13,7 @@ int main(int argc, char **argv, char **envp)
 
   printf("Message Body: %s\n<br/>", fgets(str, 1000, stdin));
 
-  // Print HTML footer
+  // Print the HTML footer
   printf("</body>");
   printf("</html>");
   return 0;
