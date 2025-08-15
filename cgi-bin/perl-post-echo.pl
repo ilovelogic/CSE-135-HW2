@@ -10,6 +10,8 @@ print <<END;
 <hr>
 END
 
+print("<h1>Anne was here</h1>");
+
 # NOTE: Although the Query String is an environment variable, the Message Body
 # must be read in from the Standard Input with any language using CGI.
 # Credit for this code to read in the Post data comes from:
