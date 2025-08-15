@@ -2,11 +2,6 @@
 header("Cache-Control: no-cache");
 header("Content-type: application/json");
 
-use JSON;
-
-print "Cache-Control: no-cache\n";
-print "Content-type: application/json\n\n";
-
 $date = date();
 $address = $_SERVER['REMOTE_ADDR'];
 
