@@ -24,7 +24,7 @@ print "<body>";
 
 print "<h1>Perl Sessions Page 1</h1>";
 
-print("<h1>Anne was here</h1>");
+print "<h1>Anne was here</h1>";
 
 if ($name){
 	print("<p><b>Name:</b> $name");

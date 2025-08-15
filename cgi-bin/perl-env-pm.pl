@@ -10,7 +10,7 @@ print header;
 # CGI.pm Method
 print start_html("Environment Variables");
 
-print("<h1>Anne was here</h1>");
+print "<h1>Anne was here</h1>";
 print "<h1 align='center'>Environment Variables</h1><hr />";
 
 # Loop through all of the environment variables, then print each variable and its value

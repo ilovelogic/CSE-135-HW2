@@ -10,7 +10,7 @@ print <<END;
 <hr>
 END
 
-print("<h1>Anne was here</h1>");
+print "<h1>Anne was here</h1>";
 # Loop over the environment variables and print each variable and its value
 foreach $variable (sort keys %ENV) {
   print "<b>$variable:</b> $ENV{$variable}<br />\n";

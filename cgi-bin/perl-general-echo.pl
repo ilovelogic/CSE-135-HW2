@@ -10,7 +10,7 @@ print <<END;
 <hr>
 END
 
-print("<h1>Anne was here</h1>");
+print "<h1>Anne was here</h1>";
 
 # HTTP Protocol, HTTP Method, and the Query String are all environment variables
 print "<p><b>HTTP Protocol:</b> $ENV{SERVER_PROTOCOL}</p>";

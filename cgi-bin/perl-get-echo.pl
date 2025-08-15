@@ -10,7 +10,7 @@ print <<END;
 <hr>
 END
 
-print("<h1>Anne was here</h1>");
+print "<h1>Anne was here</h1>";
 
 # The Query String is simply an environment variable
 print "<b>Query String:</b> $ENV{QUERY_STRING}<br />\n";
