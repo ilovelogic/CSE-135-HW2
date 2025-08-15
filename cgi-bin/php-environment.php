@@ -15,6 +15,7 @@ foreach ($_ENV as $env_var => $value) {
 }
 echo "</ul>";
 echo "<h2>Server Variables</h2>";
+echo "<br> Starting something new!";
 echo "<ul>";
 foreach ($_SERVER as $serv_var => $value) {
     echo "<li><strong>" . htmlspecialchars($serv_var) . "</strong>: " . htmlspecialchars($value) . "</li>";
