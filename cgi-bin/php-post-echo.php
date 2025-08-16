@@ -9,6 +9,9 @@ echo "<body>";
 echo "<h1 align=center>POST Request Echo</h1>";
 echo "<hr/>";
 
+echo "<p><strong>Raw Message Body:<strong></p>" . file_get_contents('php://input');
+
+echo "<p><strong>Parsed Message Body:<strong></p>";
 echo "<ul>";
 foreach ($_POST as $field => $value) {
     echo "<li><strong>" . htmlspecialchars($field) . "</strong>: " . htmlspecialchars($value) . "</li>";
