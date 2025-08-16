@@ -15,7 +15,7 @@ echo "<body>";
 echo "<h1 align=center>PHP Sessions Page 1</h1>";
 echo "<hr/>";
 
-$_SESSION['username'] = $_POST['username'] ?? "You do not have a name set";
+$_SESSION['username'] = $_SESSION['username'] ?? $_POST['username'] ?? "You do not have a name set";
 echo "<p><strong>Name: </strong>" . $_SESSION['username'] . "</p>";
 
 echo "<a href=\"/php-cgiform.html?PHPSESSID=" . session_id() . "\">CGI Form</a><br/>";
