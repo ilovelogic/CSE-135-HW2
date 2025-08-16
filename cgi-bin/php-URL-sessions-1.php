@@ -18,11 +18,11 @@ echo "<hr/>";
 $_SESSION['username'] = $_POST['username'] ?? "You do not have a name set";
 echo "<p><strong>Name: </strong>" . $_SESSION['username'] . "</p>";
 
-echo "<a href=\"/php-cgiform.html?PHPSESSID=" . PHPSESSID . "\">CGI Form</a><br/>";
-echo "<a href=\"/cgi-bin/php-URL-sessions-2.php?PHPSESSID=" . PHPSESSID . "\">Session Page 2</a>";
+echo "<a href=\"/php-cgiform.html?PHPSESSID=" . session_id() . "\">CGI Form</a><br/>";
+echo "<a href=\"/cgi-bin/php-URL-sessions-2.php?PHPSESSID=" . session_id() . "\">Session Page 2</a>";
 
 echo "<form style=\"margin-top:30px\" action = \"php-destroy-URL-session.php\" method = \"get\">";
-echo "<input type=\"hidden\" name=\"PHPSESSID\" value=\"" . PHPSESSID . "\"/>";
+echo "<input type=\"hidden\" name=\"PHPSESSID\" value=\"" . session_id() . "\"/>";
 echo "<button type = \"submit\">Destroy Session</button>";
 echo "</form>";
 echo "</body>";
