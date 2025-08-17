@@ -8,7 +8,7 @@ $_SESSION = [];
 $params = session_get_cookie_params();
 echo "session_name(): " . session_name() . "params[path]: " . $params['path'] . "params[domain]" . $params['domain'];
 echo "params[secure]: " . $params['secure'] . "params[httponly]: " . $params['httponly'];
-setcookie("PHPSESSID", '', time-1, $params['path'], $params['domain'], $params['secure'], $params['httponly']);
+#setcookie("PHPSESSID", '', time-1, $params['path'], $params['domain'], $params['secure'], $params['httponly']);
 
 echo "<!doctype html>";
 echo "<head>";
