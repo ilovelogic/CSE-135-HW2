@@ -3,6 +3,7 @@ header("Cache-Control: no-cache");
 header("Content-Type: text/html");
 
 session_destroy();
+$_SESSION = [];
 
 echo "<!doctype html>";
 echo "<head>";
