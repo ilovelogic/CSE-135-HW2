@@ -4,6 +4,7 @@ header("Content-Type: text/html");
 
 session_destroy();
 $_SESSION = [];
+echo $_SESSION['username'] . ", is this for real?";
 
 echo "<!doctype html>";
 echo "<head>";
