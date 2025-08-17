@@ -9,4 +9,5 @@ app.get('/node/node-hello-html-world.js', (request, response) => { // called whe
         + "</html>");
 });
 
-app.listen(3000); // gets server up and listening on post 3000
+app.listen(3000, () => {
+    console.log('Server running on port 3000');}); // gets server up and listening on post 3000
