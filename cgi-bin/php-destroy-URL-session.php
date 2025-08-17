@@ -2,9 +2,11 @@
 header("Cache-Control: no-cache");
 header("Content-Type: text/html");
 
+session_destroy();
+
 echo "<!doctype html>";
 echo "<head>";
-echo "<title>PHP Session Destroyed</title>";
+echo "<title>Session Destroyed</title>";
 echo "</head>";
 
 echo "<body>";
