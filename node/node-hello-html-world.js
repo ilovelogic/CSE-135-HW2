@@ -1,7 +1,7 @@
 const express = require('express'); // importing Express module
 const app = express(); // new Express application
 
-app.get('/node-hello-html-world.js', (request, response) => { // called when a get received at the url
+app.get('/node/node-hello-html-world.js', (request, response) => { // called when a get received at the url
     response.send("Cache-Control: no-cache");
     response.send("<!doctype html>");
     response.send("<head><title>Hello HTML World</title></head>");
