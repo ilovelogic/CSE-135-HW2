@@ -20,7 +20,6 @@ echo "<a href=\"/php-cgiform.html\">CGI Form</a><br/>";
 echo "<a href=\"/cgi-bin/php-cookie-sessions-2.php\">Session Page 2</a>";
 
 echo "<form style=\"margin-top:30px\" action = \"php-destroy-cookie-session.php\" method = \"get\">";
-echo "<input type=\"hidden\" name=\"PHPSESSID\" value=\"" . session_id() . "\"/>";
 echo "<button type = \"submit\">Destroy Session</button>";
 echo "</form>";
 echo "</body>";
