@@ -1,10 +1,9 @@
-const { urlencoded } = require('body-parser');
 const express = require('express'); // importing Express module
 const app = express(); // new Express application
 
 app.use(express.urlencoded({extended: true}));
 
-app.post('/node/node-get-echo.js', (request, response) => { // called when a get received at the url
+app.post('/node/node-post-echo.js', (request, response) => { // called when a get received at the url
     response.set("Cache-Control", "no-cache");
     response.send("<!doctype html>"
         + "<head><title>Echo</title></head>"
