@@ -1,5 +1,5 @@
 const express = require('express');
-const app = express();
+const app = express(); // 
 
 app.get('/node/node-environment.js', (request, response) => {
     let env_var_str = "";
@@ -15,6 +15,6 @@ app.get('/node/node-environment.js', (request, response) => {
         + "</body></html>");
 });
 
-app.listen(3000, () => {
-    console.log('Server running on port 3000');); // gets server up and listening on post 3000
-};
+app.listen(3002, () => {
+    console.log('Server running on port 3002');}
+);
