@@ -4,16 +4,16 @@ const app = express(); //
 app.get('/node/node-environment.js', (request, response) => {
     let headers_str = "";
     let env_vars_str = "";
-    for (const key in request.headers) {
-        headers_str += `<li>${key}: ${request.headers[key]}</li>`;
+    for (const [key, value] in Object.entries(request.headers)) {
+        headers_str += `<li>${key}: ${value}</li>`;
     }
 
     // firefox detection
     const maybe_firefox = request.headers['user-agent'] || "";
     const uses_firefox = maybe_firefox.toLowerCase().includes('firefox');
     const firefox_mssg = uses_firefox ? "<h3><strong>Uses Firefox</strong></h3>" : "<h3><strong>No Firefox</strong></h3>";
-    for (const key in process.env) {
-        env_vars_str += `<li>${key}: ${process.env[key]}</li>`;
+    for (const [key, value] in Object.entries(process.env)) {
+        env_vars_str += `<li>${key}: ${value}</li>`;
     }
     response.set("Cache-Control", "no-cache");
     response.send("<!doctype html>"
