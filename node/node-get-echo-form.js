@@ -12,6 +12,6 @@ app.get('/node/node-get-echo-form.js', (request, response) => { // called when a
         + "</form></body></html>");
 });
 
-app.listen(3003, () => {
-    console.log('Server running on port 3003');
+app.listen(3010, () => {
+    console.log('Server running on port 3010');
 });

@@ -20,7 +20,8 @@ app.get('/node/node-environment.js', (request, response) => {
         + "<head><title>Environment Variables</title></head>"
         + "<body><h1 align=center>Environment Variables</h1>"
         + "<h2>HTTP Request Headers</h2>"
-        + `<ul>${headers_str}</ul>` //+ `${firefox_mssg}<br>`
+        + `<ul>${headers_str}</ul>`
+        + `${firefox_mssg}<br>`
         + "<h2>Environment Variables</h2>"
         + `<ul>${env_vars_str}</ul>`
         + "</body></html>");

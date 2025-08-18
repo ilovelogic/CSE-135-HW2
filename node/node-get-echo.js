@@ -5,8 +5,8 @@ app.get('/node/node-get-echo.js', (request, response) => { // called when a get 
     response.set("Cache-Control", "no-cache");
     response.send("<!doctype html>"
         + "<head><title>Echo</title></head>"
-        + `<body><h1 align=center>Hello ${request.query.username}</h1>`
-        + `Your password is ${request.query.password}`
+        + "<body><h1 align=center>Hello " + request.query.username + "</h1>"
+        + "Your password is " + request.query.password
         + "</body></html>");
 });
 
