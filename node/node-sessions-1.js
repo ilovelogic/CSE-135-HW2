@@ -10,7 +10,7 @@ let redisClient = createClient();
 redisClient.connect().catch(console.error); // will print errors if encountered
 
 app.use(session({
-    store: new redisStorage({client: redisClient}),
+    store: new RedisStorage({client: redisClient}),
     secret: "b2k3*23H^4r3Dewvs5Hvks3452",
     resave: false,
     saveUninitialized: false,
