@@ -14,7 +14,7 @@ app.use(session({
     secret: "b2k3*23H^4r3Dewvs5Hvks3452",
     resave: false,
     saveUninitialized: false,
-    cookie: {path: '/node/', secure: true}
+    cookie: {path: '/node/', secure: false}
 }));
 
 app.post('/node/node-sessions-1.js', (request, response) => {
