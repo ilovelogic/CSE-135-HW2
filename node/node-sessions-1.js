@@ -18,7 +18,7 @@ app.use(session({
     cookie: {path: '/node/', secure: false}
 }));
 
-app.use(express.urlencoded({ extended: true})); // to populate request.session
+app.use(express.urlencoded({ extended: true})); // to get good formatting of input
 
 app.post('/node/node-sessions-1.js', (request, response) => {
     request.session.username = request.body.username ?? request.session.username ?? "person who did not enter their username";

@@ -19,9 +19,7 @@ app.use(session({
     cookie: {path: '/node/', secure: false}
 }));
 
-app.use(express.urlencoded({ extended: true})); // to populate request.session
-
-app.get('/node/node-destroy-session.js', (request, response) => {
+app.post('/node/node-destroy-session.js', (request, response) => {
     request.session.destroy(err => {
         if (err) {
             return response.status(500).send("Error destroying session");
@@ -32,6 +30,8 @@ app.get('/node/node-destroy-session.js', (request, response) => {
             + "<head><title>Node Session DESTROYED</title></head>"
             + "<body><h1 align=center>Node Session DESTROYED</h1>"
             + "<p>Your data is gone...</p>"
+            + "<a href=\"/node/node-sessions-1.js\">Session Page 1</a><br/>"
+            + "<a href=\"/node-cgiform.html\">CGI Form</a><br/>"
             + "</body></html>");
     });
 });
