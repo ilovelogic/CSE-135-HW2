@@ -7,7 +7,7 @@ app.all('/node/node-general-request-echo.js', (request, response) => { // for an
     response.set("Cache-Control", "no-cache");
 
     // in case the query string is null
-    safe_query = request.query && typeof request.query == 'object' ? request.query : {};
+    const safe_query = request.query && typeof request.query == 'object' ? request.query : {};
 
     let query_str = "<ul>";
     for (const [key, value] in Object.entries(safe_query)) {
@@ -16,7 +16,7 @@ app.all('/node/node-general-request-echo.js', (request, response) => { // for an
     query_str += "</ul>";
 
     // in case the message body is null
-    safe_body = request.body && typeof request.body == 'object' ? request.body : {};
+    const safe_body = request.body && typeof request.body == 'object' ? request.body : {};
 
     let body_str = "<ul>";
     for (const [key, value] in Object.entries(safe_body)) {
