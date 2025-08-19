@@ -18,7 +18,7 @@ app.use(session({
     cookie: {path: '/node/', secure: false}
 }));
 
-app.user(express.urlencoded({ extended: true})); // to populate request.session
+app.use(express.urlencoded({ extended: true})); // to populate request.session
 
 app.post('/node/node-sessions-1.js', (request, response) => {
     request.session.username = request.session.username || request.body.username;
