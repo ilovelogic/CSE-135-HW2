@@ -2,13 +2,10 @@ import express from 'express'; // using this style now, because
 import  session from 'express-session'; // apparently I have connect-redis@9.0.0 as my download
 import {createClient} from 'redis';
 import {RedisStore} from 'connect-redis';
-import { connect } from 'http2';
 
 
 const app = express();
-
 const redisClient = createClient();
-
 await redisClient.connect();
 
 app.use(session({
@@ -22,9 +19,9 @@ app.use(session({
 app.post('/node/node-destroy-session.js', (request, response) => {
     request.session.destroy(err => {
         if (err) {
-            return response.status(500).send("Error destroying session");
+            return response.status(500).send("Encountered an error while destroying session");
         }
-        response.clearCookie('connect.sid');
+        response.clearCookie('connect.sid', {path: '/node/'});
         response.set("Cache-Control", "no-cache");
         response.send("<!doctype html>"
             + "<head><title>Node Session DESTROYED</title></head>"
