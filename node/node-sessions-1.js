@@ -1,13 +1,15 @@
-const express = require('express');
-const session = require('express-session');
-const {createClient} = require('redis'); // for connecting client to redis server
-const RedisStore = require('connect-redis').default;
+import express from 'express'; // using this style now, because
+import  session from 'express-session'; // apparently I have connect-redis@9.0.0 as my download
+import {createClient} from 'redis';
+import connectRedis from 'connect-redis';
+
+const RedisStore = connectRedis(session);
 
 const app = express();
 
-let redisClient = createClient();
+const redisClient = createClient();
 
-redisClient.connect().catch(console.error); // will print errors if encountered
+await redisClient.connect();
 
 app.use(session({
     store: RedisStore({client: redisClient}),
