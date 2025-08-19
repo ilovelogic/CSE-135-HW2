@@ -27,10 +27,14 @@ app.post('/node/node-sessions-1.js', (request, response) => {
     response.send("<!doctype html>"
         + "<head><title>Node Sessions Page 1</title></head>"
         + "<body><h1 align=center>Node Sessions Page 1</h1>"
-        + "Hello " + request.session.username  + ", "
+        + "<p>Hello " + request.session.username  + ", "
         + "we here at Evilbucks know that you like ordering "
         + request.session.order + ". We'll sell that info to everyone! "
-        + "(cue scary music)"
+        + "(cue scary music)</p>"
+        + "<a href=\"/node-cgiform.html\">CGI Form</a><br/>"
+        + "<form style=\"margin-top:30px\" action = \"/node/node-destroy-session.js\" method = \"post\">"
+        + "<button type = \"submit\">Destroy Session</button>"
+        + "</form>"
         + "</body></html>");
 });
 
