@@ -1,4 +1,4 @@
-const express = require('express'); // importing Express module
+import express from 'express';
 const app = express(); // new Express application
 
 app.get('/node/node-post-echo-form.js', (request, response) => { // called when a get received at the url

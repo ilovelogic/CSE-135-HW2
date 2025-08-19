@@ -1,4 +1,4 @@
-const express = require('express'); // importing Express module
+import express from 'express'; // importing Express module
 const app = express(); // new Express application
 
 app.get('/node/node-hello-html-world.js', (request, response) => { // called when a get received at the url

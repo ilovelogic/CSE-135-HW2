@@ -1,5 +1,5 @@
-const express = require('express'); // importing Express module
-const requestIp = require('request-ip') // for getting ipaddress of client
+import express from 'express';
+import requestIp from 'request-ip'; // for getting ipaddress of client
 const app = express(); // new Express application
 
 app.use(requestIp.mw());

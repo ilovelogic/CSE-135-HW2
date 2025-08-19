@@ -29,7 +29,7 @@ app.post('/node/node-sessions-1.js', (request, response) => {
         + "<body><h1 align=center>Node Sessions Page 1</h1>"
         + "Hello " + request.session.username  + ", "
         + "we here at Evilbucks know that you like ordering "
-        + request.session.order + ". "
+        + request.session.order + ". We'll sell that info to everyone! "
         + "(cue scary music)"
         + "</body></html>");
 });
