@@ -1,20 +1,19 @@
 const express = require('express');
 const session = require('express-session');
-const {create_client} = require('redis'); // for connecting client to redis server
-const redis_storage = require('connect-redis').default;
+const {createClient} = require('redis'); // for connecting client to redis server
+const redisStorage = require('connect-redis').default;
 
 const app = express();
 
-let redis_client = create_client();
+let redisClient = createClient();
 
-redis_client.connect().catch(console.error); // will print errors if encountered
+redisClient.connect().catch(console.error); // will print errors if encountered
 
 app.use(session({
-    store: new redis_storage({client: redis_client}),
+    store: new redisStorage({client: redisClient}),
     secret: "b2k3*23H^4r3Dewvs5Hvks3452",
     resave: false,
     saveUninitialized: false,
-    store: mongo_storage.create(),
     cookie: {path: '/node/', secure: true}
 }));
 
