@@ -38,6 +38,17 @@ app.post('/node/node-sessions-1.js', (request, response) => {
         + "</body></html>");
 });
 
+app.get('/node/node-sessions-1.js', (request, response) => {
+    response.set("Cache-Control", "no-cache");
+    response.send("<!doctype html>"
+        + "<head><title>Node Sessions Page 1</title></head>"
+        + "<body><h1 align=center>Node Sessions Page 1</h1>"
+        + "<p>We here at Evilbucks would like to get some of your data.</p>"
+        + "<p>Please navigate back to the form to enter some!</p>"
+        + "<a href=\"/node-cgiform.html\">CGI Form</a><br/>"
+        + "</body></html>");
+});
+
 app.listen(3008, () => {
     console.log("Server listening on port 3008");
 });
