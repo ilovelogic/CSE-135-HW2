@@ -24,8 +24,12 @@ app.use(session({
 app.use(express.urlencoded({ extended: true})); // to get good formatting of input
 
 app.post('/node/node-sessions-1.js', (request, response) => {
+    const sessionId = request.session.id;
+    LogRocket.identify(sessionId, {});
+    
     request.session.username = request.body.username ?? request.session.username ?? "person who did not enter their username";
     request.session.order = request.body.order ?? request.session.order ?? "- well, actually, we aren't sure";
+    
     response.set("Cache-Control", "no-cache");
     response.send("<!doctype html>"
         + "<head><title>Node Sessions Page 1</title></head>"
