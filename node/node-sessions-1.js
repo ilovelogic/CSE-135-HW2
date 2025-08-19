@@ -1,9 +1,8 @@
 import express from 'express'; // using this style now, because
 import  session from 'express-session'; // apparently I have connect-redis@9.0.0 as my download
 import {createClient} from 'redis';
-import connectRedis from 'connect-redis';
+import {RedisStore} from 'connect-redis';
 
-const RedisStore = connectRedis(session);
 
 const app = express();
 
@@ -12,7 +11,7 @@ const redisClient = createClient();
 await redisClient.connect();
 
 app.use(session({
-    store: RedisStore({client: redisClient}),
+    store: new RedisStore({client: redisClient}),
     secret: "b2k3*23H^4r3Dewvs5Hvks3452",
     resave: false,
     saveUninitialized: false,
