@@ -1,6 +1,3 @@
-import LogRocket from 'logrocket';
-LogRocket.init('sv4fi3/annekelleysite');
-
 import express from 'express'; // using this style now, because
 import  session from 'express-session'; // apparently I have connect-redis@9.0.0 as my download
 import {createClient} from 'redis';

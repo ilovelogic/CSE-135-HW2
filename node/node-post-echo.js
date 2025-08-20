@@ -1,6 +1,3 @@
-import LogRocket from 'logrocket';
-LogRocket.init('sv4fi3/annekelleysite');
-
 import express from 'express'; // importing Express module
 
 const app = express(); // new Express application
