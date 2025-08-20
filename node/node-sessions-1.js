@@ -1,4 +1,4 @@
-import { body } from 'express-validator';
+//import { body } from 'express-validator';
 
 import express from 'express'; // using this style now, because
 import session from 'express-session'; // apparently I have connect-redis@9.0.0 as my download
@@ -22,8 +22,10 @@ app.use(session({
 
 app.use(express.urlencoded({ extended: true})); // to get good formatting of input
 
-app.post('/node/node-sessions-1.js', 
-    [body('username').trim().escape(), body('order').trim().escape()],
+// [body('username').trim().escape(), body('order').trim().escape()]
+// On a public web server, I would want to use something like express-validator to santize input
+// because of "trust no data, trust no user"
+app.post('/node/node-sessions-1.js',
     (request, response) => {
 
     request.session.username = request.body.username ?? "person who did not enter their username";

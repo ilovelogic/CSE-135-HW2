@@ -1,10 +1,13 @@
-import { query } from 'express-validator';
-
+//import { query } from 'express-validator';
 
 import express from 'express'; // importing Express module
 const app = express(); // new Express application
 
-app.get('/node/node-get-echo.js', [query('username').trim().escape()],(request, response) => { // called when a get received at the url
+// [query('username').trim().escape()]
+
+// On a public web server, I would want to use something like express-validator to santize input
+// because of "trust no data, trust no user"
+app.get('/node/node-get-echo.js',(request, response) => { // called when a get received at the url
     response.set("Cache-Control", "no-cache");
     response.send("<!doctype html>"
         + "<head><title>Get Echo</title></head>"
