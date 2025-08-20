@@ -32,7 +32,10 @@ app.post('/node/node-sessions-1.js', (request, response) => {
     
     response.set("Cache-Control", "no-cache");
     response.send("<!doctype html>"
-        + "<head><title>Node Sessions Page 1</title></head>"
+        + "<head>"
+        + "<script src=\"https://cdn.lgrckt-in.com/LogRocket.min.js\" crossorigin=\"anonymous\"></script>"
+        + "<script>window.LogRocket && window.LogRocket.init('sv4fi3/annekelleysite');</script>"
+        + "<title>Node Sessions Page 1</title></head>"
         + "<body><h1 align=center>Node Sessions Page 1</h1>"
         + "<p>Hello " + request.session.username  + ", "
         + "we here at Evilbucks know that you like ordering "
