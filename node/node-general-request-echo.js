@@ -1,6 +1,3 @@
-import LogRocket from 'logrocket';
-LogRocket.init('sv4fi3/annekelleysite');
-
 import express from 'express'; // importing Express module
 const app = express(); // new Express application
 
@@ -28,10 +25,7 @@ app.all('/node/node-general-request-echo.js', (request, response) => { // for an
     body_str += "</ul>";
 
     response.send("<!doctype html>"
-        + "<head>"
-        + "<script src=\"https://cdn.lgrckt-in.com/LogRocket.min.js\" crossorigin=\"anonymous\"></script>"
-        + "<script>window.LogRocket && window.LogRocket.init('sv4fi3/annekelleysite');</script>"
-        + "<title>General Request Echo</title></head>"
+        + "<head><title>General Request Echo</title></head>"
         + "<body><h1 align=center>General Request Echo</h1><hr/>"
         + "<p><strong>HTTP Protocol: </strong>" + request.protocol.toUpperCase() 
         + "/" + request.httpVersion + "</p>"

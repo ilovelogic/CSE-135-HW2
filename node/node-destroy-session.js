@@ -1,6 +1,3 @@
-import LogRocket from 'logrocket';
-LogRocket.init('sv4fi3/annekelleysite');
-
 import express from 'express'; // using this style now, because
 import  session from 'express-session'; // apparently I have connect-redis@9.0.0 as my download
 import {createClient} from 'redis';
@@ -27,10 +24,7 @@ app.post('/node/node-destroy-session.js', (request, response) => {
         response.clearCookie('connect.sid', {path: '/node/'});
         response.set("Cache-Control", "no-cache");
         response.send("<!doctype html>"
-            + "<head>"
-            + "<script src=\"https://cdn.lgrckt-in.com/LogRocket.min.js\" crossorigin=\"anonymous\"></script>"
-            + "<script>window.LogRocket && window.LogRocket.init('sv4fi3/annekelleysite');</script>"
-            + "<title>Node Session DESTROYED</title></head>"
+            + "<head><title>Node Session DESTROYED</title></head>"
             + "<body><h1 align=center>Node Session DESTROYED</h1>"
             + "<p>Your data is gone...</p>"
             + "<a href=\"/node/node-sessions-1.js\">Session Page 1</a><br/>"

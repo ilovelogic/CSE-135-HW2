@@ -1,6 +1,3 @@
-import LogRocket from 'logrocket';
-LogRocket.init('sv4fi3/annekelleysite');
-
 import express from 'express'; // using this style now, because
 import  session from 'express-session'; // apparently I have connect-redis@9.0.0 as my download
 import {createClient} from 'redis';
@@ -24,18 +21,11 @@ app.use(session({
 app.use(express.urlencoded({ extended: true})); // to get good formatting of input
 
 app.post('/node/node-sessions-1.js', (request, response) => {
-    const sessionId = request.session.id;
-    LogRocket.identify(sessionId, {});
-    
-    request.session.username = request.body.username ?? "person who did not enter their username";
-    request.session.order = request.body.order ?? "- well, actually, we aren't sure";
-    
+    request.session.username = request.body.username ?? request.session.username ?? "person who did not enter their username";
+    request.session.order = request.body.order ?? request.session.order ?? "- well, actually, we aren't sure";
     response.set("Cache-Control", "no-cache");
     response.send("<!doctype html>"
-        + "<head>"
-        + "<script src=\"https://cdn.lgrckt-in.com/LogRocket.min.js\" crossorigin=\"anonymous\"></script>"
-        + "<script>window.LogRocket && window.LogRocket.init('sv4fi3/annekelleysite');</script>"
-        + "<title>Node Sessions Page 1</title></head>"
+        + "<head><title>Node Sessions Page 1</title></head>"
         + "<body><h1 align=center>Node Sessions Page 1</h1>"
         + "<p>Hello " + request.session.username  + ", "
         + "we here at Evilbucks know that you like ordering "
@@ -51,10 +41,7 @@ app.post('/node/node-sessions-1.js', (request, response) => {
 app.get('/node/node-sessions-1.js', (request, response) => {
     response.set("Cache-Control", "no-cache");
     response.send("<!doctype html>"
-        + "<head>"
-        + "<script src=\"https://cdn.lgrckt-in.com/LogRocket.min.js\" crossorigin=\"anonymous\"></script>"
-        + "<script>window.LogRocket && window.LogRocket.init('sv4fi3/annekelleysite');</script>"
-        + "<title>Node Sessions Page 1</title></head>"
+        + "<head><title>Node Sessions Page 1</title></head>"
         + "<body><h1 align=center>Node Sessions Page 1</h1>"
         + "<p>We here at Evilbucks would like to get some of your data.</p>"
         + "<p>Please navigate back to the form to enter some!</p>"

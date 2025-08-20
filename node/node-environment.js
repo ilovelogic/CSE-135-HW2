@@ -1,6 +1,3 @@
-import LogRocket from 'logrocket';
-LogRocket.init('sv4fi3/annekelleysite');
-
 import express from 'express';
 const app = express(); // 
 
@@ -20,10 +17,7 @@ app.get('/node/node-environment.js', (request, response) => {
     }
     response.set("Cache-Control", "no-cache");
     response.send("<!doctype html>"
-        + "<head>"
-        + "<script src=\"https://cdn.lgrckt-in.com/LogRocket.min.js\" crossorigin=\"anonymous\"></script>"
-        + "<script>window.LogRocket && window.LogRocket.init('sv4fi3/annekelleysite');</script>"
-        + "<title>Environment Variables</title></head>"
+        + "<head><title>Environment Variables</title></head>"
         + "<body><h1 align=center>Environment Variables</h1>"
         + "<h2>HTTP Request Headers</h2>"
         + `<ul>${headers_str}</ul>`
