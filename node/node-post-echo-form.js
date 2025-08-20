@@ -7,7 +7,6 @@ app.get('/node/node-post-echo-form.js', (request, response) => { // called when 
         + "<head><title>Basic Form</title></head>"
         + "<body><h1 align=center>Enter details to test our POST echoing!</h1>"
         + "<form action=\"node-post-echo.js\" method=\"post\">Username: <input type=\"text\" name=\"username\"><br>"
-        + "Password: <input type=\"password\" name=\"password\"><br>"
         + "<input type = \"submit\" value = \"Send\"><br>"
         + "</form></body></html>");
 });
