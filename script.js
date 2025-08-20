@@ -1,6 +1,3 @@
-import LogRocket from 'logrocket';
-LogRocket.init('sv4fi3/annekelleysite');
-
 const quoteArray = ["Everything excellent is as difficult as it is rare.", 
     "You could leave life right now. Let that determine what you do and say and think.",
     "Trees that are slow to grow bear the best fruit",
