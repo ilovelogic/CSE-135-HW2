@@ -1,4 +1,5 @@
-import {query} from 'express-validator';
+import { query } from 'express-validator';
+
 
 import express from 'express'; // importing Express module
 const app = express(); // new Express application
