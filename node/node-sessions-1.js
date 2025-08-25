@@ -30,7 +30,10 @@ app.post('/node/node-sessions-1.js',
 
     request.session.username = request.body.username ?? "person who did not enter their username";
     request.session.order = request.body.order ?? "- well, actually, we aren't sure";
+    
+    response.set("Content-Type", "text/html");
     response.set("Cache-Control", "no-cache");
+    
     response.send("<!doctype html>"
         + "<head><title>Node Sessions Page 1</title></head>"
         + "<body><h1 align=center>Node Sessions Page 1</h1>"

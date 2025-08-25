@@ -14,7 +14,7 @@ echo "<p><strong>Protocol: </strong>" . $_SERVER['SERVER_PROTOCOL'] . "</p>";
 echo "<p><strong>Query: </strong>" . $_SERVER['QUERY_STRING'] . "</p>";
 echo "<p><strong>Message Body: </strong>";
 echo "<ul>";
-foreach ($_POST as $field => $value) {
+foreach ($_REQUEST as $field => $value) {
     echo "<li>" . htmlspecialchars($field) . ": " . htmlspecialchars($value) . "</li>";
 }
 echo "</ul>";

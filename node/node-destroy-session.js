@@ -22,6 +22,7 @@ app.post('/node/node-destroy-session.js', (request, response) => {
             return response.status(500).send("Encountered an error while destroying session");
         }
         response.clearCookie('connect.sid', {path: '/node/'});
+        response.set("Content-Type", "text/html");
         response.set("Cache-Control", "no-cache");
         response.send("<!doctype html>"
             + "<head><title>Node Session DESTROYED</title></head>"

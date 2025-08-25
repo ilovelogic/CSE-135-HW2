@@ -16,6 +16,7 @@ app.get('/node/node-environment.js', (request, response) => {
         env_vars_str += `<li>${key}: ${value}</li>`;
     }
     response.set("Cache-Control", "no-cache");
+    response.set("Content-Type", "text/html");
     response.send("<!doctype html>"
         + "<head><title>Environment Variables</title></head>"
         + "<body><h1 align=center>Environment Variables</h1>"

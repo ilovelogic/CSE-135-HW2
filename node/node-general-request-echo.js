@@ -4,6 +4,7 @@ const app = express(); // new Express application
 app.use(express.urlencoded({extended: true}));
 
 app.all('/node/node-general-request-echo.js', (request, response) => { // for any request type
+    response.set("Content-Type", "text/html");
     response.set("Cache-Control", "no-cache");
 
     // in case the query string is null

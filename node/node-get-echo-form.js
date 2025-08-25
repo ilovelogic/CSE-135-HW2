@@ -2,6 +2,7 @@ import express from 'express'; // importing Express module
 const app = express(); // new Express application
 
 app.get('/node/node-get-echo-form.js', (request, response) => { // called when a get received at the url
+    response.set("Content-Type", "text/html");
     response.set("Cache-Control", "no-cache");
     response.send("<!doctype html>"
         + "<head><title>Basic Form</title></head>"
